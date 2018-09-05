@@ -578,6 +578,11 @@ glowroot.config([
       templateUrl: 'views/admin/storage.html',
       controller: 'AdminStorageCtrl'
     });
+    $stateProvider.state('admin.zabbix', {
+        url: '/zabbix',
+        templateUrl: 'views/admin/zabbix.html',
+        controller: 'ZabbixCtrl'
+      });
     $stateProvider.state('admin.smtp', {
       url: '/smtp',
       templateUrl: 'views/admin/smtp.html',

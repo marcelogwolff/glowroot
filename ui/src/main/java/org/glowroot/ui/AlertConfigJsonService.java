@@ -121,6 +121,8 @@ class AlertConfigJsonService {
     @POST(path = "/backend/config/alerts/add", permission = "agent:config:edit:alert")
     String addAlert(@BindAgentRollupId String agentRollupId, @BindRequest AlertConfigDto configDto)
             throws Exception {
+    	System.out.println(agentRollupId);
+    	System.out.println(configDto);
         AlertConfig alertConfig = configDto.toProto();
         configRepository.insertAlertConfig(agentRollupId, alertConfig);
         return getAlertResponse(agentRollupId, alertConfig);
